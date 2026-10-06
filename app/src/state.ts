@@ -91,7 +91,8 @@ function reducer(s: State, a: Action): State {
 
 function initialState(start: StartScreen): State {
   return {
-    screen: start, name: 'Alex', nameError: '', introStep: 0, count: 3, idx: 0, answers: [],
+    // The name field starts empty; the demo entry points (?screen=quiz|profile) skip it, so they get a sample name.
+    screen: start, name: start === 'welcome' ? '' : 'Alex', nameError: '', introStep: 0, count: 3, idx: 0, answers: [],
     dx: 0, dy: 0, dragging: false, exiting: 0, secs: 0, timerOn: start === 'quiz', paused: false, detail: 0,
     revealed: start === 'profile',
   };
