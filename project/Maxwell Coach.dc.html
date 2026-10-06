@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/an-huac-mayab-educar-para-transformar-44f5d926-dece-4fcd-94fa-821a7f910bd0/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/an-huac-mayab-educar-para-transformar-44f5d926-dece-4fcd-94fa-821a7f910bd0/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/an-huac-mayab-educar-para-transformar-44f5d926-dece-4fcd-94fa-821a7f910bd0/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/an-huac-mayab-educar-para-transformar-44f5d926-dece-4fcd-94fa-821a7f910bd0/tokens/base.css">
+  <link rel="stylesheet" href="_ds/an-huac-mayab-educar-para-transformar-44f5d926-dece-4fcd-94fa-821a7f910bd0/styles.css">
+  <script src="_ds/an-huac-mayab-educar-para-transformar-44f5d926-dece-4fcd-94fa-821a7f910bd0/_ds_bundle.js"></script>
+  <style>body{margin:0;background:#F4F4F4;font-family:var(--font-sans)}a{color:var(--orange)}a:hover{color:var(--orange-600)}*{box-sizing:border-box}</style>
+</helmet>
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px;background:var(--gray-100)">
+  <div style="position:relative;width:390px;height:844px;border-radius:52px;background:var(--rich-black);padding:10px;box-shadow:var(--shadow-lg);flex:none">
+    <div style="position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;background:var(--white);display:flex;flex-direction:column;user-select:none;-webkit-user-select:none">
+
+      <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:118px;height:32px;border-radius:999px;background:var(--rich-black);z-index:60"></div>
+      <div style="height:50px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:6px 30px 0;font:700 15px var(--font-sans);color:{{ statusFg }};background:{{ statusBg }};z-index:50">
+        <span>9:41</span>
+        <span style="display:flex;align-items:center;gap:6px">
+          <span style="display:flex;align-items:flex-end;gap:2px;height:11px"><span style="width:3px;height:4px;background:currentColor;border-radius:1px"></span><span style="width:3px;height:6px;background:currentColor;border-radius:1px"></span><span style="width:3px;height:8px;background:currentColor;border-radius:1px"></span><span style="width:3px;height:11px;background:currentColor;border-radius:1px"></span></span>
+          <span style="width:24px;height:12px;border:1.5px solid currentColor;border-radius:4px;padding:1.5px;display:flex"><span style="flex:1;background:currentColor;border-radius:1.5px"></span></span>
+        </span>
+      </div>
+
+      <sc-if value="{{ isWelcome }}" hint-placeholder-val="{{ true }}">
+        <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;padding:12px 24px 28px;gap:24px;background:var(--white)">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font:800 18px/1.1 var(--font-sans);letter-spacing:-0.02em;color:var(--rich-black)">Maxwell Coach</span>
+              <span style="font:700 10px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)">Anáhuac Mayab</span>
+            </div>
+            <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Badge" tone="gray" hint-size="110px,24px">Liderazgo académico</x-import>
+          </div>
+
+          <div style="background:var(--rich-black);border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:20px;color:var(--white)">
+            <div style="display:flex;align-items:center;gap:18px">
+              <div style="width:88px;height:88px;flex:none;display:grid;grid-template-columns:1fr 1fr;gap:4px">
+                <span style="background:#C62828;border-radius:88px 6px 6px 6px"></span>
+                <span style="background:#F2A100;border-radius:6px 88px 6px 6px"></span>
+                <span style="background:#2F6DB5;border-radius:6px 6px 6px 88px"></span>
+                <span style="background:#2E8B57;border-radius:6px 6px 88px 6px"></span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)">Lectura rápida</span>
+                <span style="font:800 22px/1.15 var(--font-sans);letter-spacing:-0.02em">Tu estilo de liderazgo en 4 colores</span>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 12px">
+              <sc-for list="{{ styles }}" as="s" hint-placeholder-count="4">
+                <div style="display:flex;align-items:center;gap:8px;font:600 13px var(--font-sans);color:var(--gray-200)"><span style="width:10px;height:10px;border-radius:999px;flex:none;background:{{ s.color }}"></span>{{ s.name }}</div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <h1 style="margin:0;font:800 30px/1.12 var(--font-sans);letter-spacing:-0.02em;color:var(--rich-black);text-wrap:pretty">Descubre cómo <span style="color:var(--orange)">lideras</span> en tu comunidad académica.</h1>
+            <p style="margin:0;font:500 16px/1.55 var(--font-sans);color:var(--text-muted);text-wrap:pretty">Son {{ total }} afirmaciones. Calculamos que te tomará menos de 5 minutos.</p>
+          </div>
+
+          <div style="margin-top:auto;display:flex;flex-direction:column;gap:16px">
+            <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Input" label="Confirma tu nombre" value="{{ name }}" on-change="{{ onName }}" placeholder="Tu nombre" error="{{ nameError }}" hint-size="100%,74px"></x-import>
+            <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Button" variant="primary" size="lg" on-click="{{ start }}" dc-props="{{ fullBtn }}" hint-size="100%,56px">Comenzar</x-import>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isDark }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1;min-height:0;display:flex;flex-direction:column;background:var(--rich-black);color:var(--white);position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 20px 12px;z-index:5">
+            <button onClick="{{ exit }}" aria-label="Salir" style="width:44px;height:44px;border-radius:999px;border:0;background:var(--raisin-black);color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#3a3a3a">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+            </button>
+            <span style="font:700 15px var(--font-sans);letter-spacing:.02em;font-variant-numeric:tabular-nums">{{ headerText }}</span>
+            <button onClick="{{ togglePause }}" aria-label="Pausa" style="width:44px;height:44px;border-radius:999px;border:0;background:var(--raisin-black);color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:{{ pauseOpacity }}" style-hover="background:#3a3a3a">
+              <sc-if value="{{ paused }}" hint-placeholder-val="{{ false }}">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"></path></svg>
+              </sc-if>
+              <sc-if value="{{ notPaused }}" hint-placeholder-val="{{ true }}">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1.5"></rect><rect x="14" y="4" width="5" height="16" rx="1.5"></rect></svg>
+              </sc-if>
+            </button>
+          </div>
+          <div style="margin:0 24px;height:4px;border-radius:999px;background:var(--raisin-black);overflow:hidden">
+            <div style="height:100%;width:{{ progressPct }}%;background:var(--orange);border-radius:999px;transition:width 250ms var(--ease)"></div>
+          </div>
+
+          <div style="flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center;padding:0 24px">
+
+            <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ false }}">
+              <div style="width:100%;background:var(--white);color:var(--rich-black);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)">
+                <div style="padding:28px 24px 24px;display:flex;flex-direction:column;gap:14px">
+                  <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)">Paso {{ introNum }} de 3</span>
+                  <p style="margin:0;font:800 26px/1.2 var(--font-sans);letter-spacing:-0.02em;text-wrap:pretty">{{ introText }}</p>
+                </div>
+                <div style="border-top:1px solid var(--gray-200);display:flex;align-items:center;justify-content:space-between;padding:14px 16px 14px 24px">
+                  <div style="display:flex;gap:6px">
+                    <sc-for list="{{ introDots }}" as="d" hint-placeholder-count="3">
+                      <span style="width:{{ d.w }}px;height:8px;border-radius:999px;background:{{ d.bg }};transition:all 250ms var(--ease)"></span>
+                    </sc-for>
+                  </div>
+                  <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Button" variant="ghost" size="md" on-click="{{ nextIntro }}" dc-props="{{ ghostOrange }}" hint-size="120px,48px">{{ introCta }}</x-import>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ isCountdown }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+                <span style="font:700 12px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--spanish-gray)">Prepárate</span>
+                <div style="width:180px;height:180px;border-radius:999px;border:3px solid var(--orange);display:flex;align-items:center;justify-content:center">
+                  <span style="font:800 {{ countSize }}px/1 var(--font-sans);letter-spacing:-0.03em;color:var(--white)">{{ countLabel }}</span>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+              <div style="position:relative;width:100%;height:400px">
+                <sc-if value="{{ hasNext }}" hint-placeholder-val="{{ true }}">
+                  <div style="position:absolute;inset:0;border-radius:28px;background:{{ nextBg }};transform:translateY(18px) scale(.92);opacity:.55;padding:32px 28px;display:flex;align-items:center">
+                    <p style="margin:0;font:800 26px/1.22 var(--font-sans);letter-spacing:-0.02em;color:{{ nextFg }};opacity:.35">{{ nextText }}</p>
+                  </div>
+                </sc-if>
+                <div onPointerDown="{{ onDown }}" onPointerMove="{{ onMove }}" onPointerUp="{{ onUp }}" onPointerCancel="{{ onUp }}" style="position:absolute;inset:0;border-radius:28px;background:{{ cardBg }};color:{{ cardFg }};padding:28px;display:flex;flex-direction:column;justify-content:space-between;cursor:grab;touch-action:none;box-shadow:0 24px 48px rgba(0,0,0,.45);transform:{{ cardTransform }};transition:{{ cardTransition }}">
+                  <div style="display:flex;justify-content:space-between;align-items:center">
+                    <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:{{ cardEyebrow }}">Afirmación {{ qNum }} de {{ total }}</span>
+                  </div>
+                  <p style="margin:0;font:800 28px/1.22 var(--font-sans);letter-spacing:-0.02em;text-wrap:pretty;pointer-events:none">{{ qText }}</p>
+                  <span style="font:600 13px var(--font-sans);color:{{ cardEyebrow }}">Desliza o usa los botones</span>
+                  <div style="position:absolute;top:24px;left:24px;transform:rotate(-12deg);border:3px solid var(--orange);color:var(--orange);border-radius:12px;padding:6px 12px;font:800 18px var(--font-sans);letter-spacing:.06em;text-transform:uppercase;background:var(--white);opacity:{{ agreeOp }};pointer-events:none">De acuerdo</div>
+                  <div style="position:absolute;top:24px;right:24px;transform:rotate(12deg);border:3px solid var(--raisin-black);color:var(--raisin-black);border-radius:12px;padding:6px 12px;font:800 18px var(--font-sans);letter-spacing:.06em;text-transform:uppercase;background:var(--white);opacity:{{ disagreeOp }};pointer-events:none">En desacuerdo</div>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ isReveal }}" hint-placeholder-val="{{ false }}">
+              <div style="width:100%;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center">
+                <div style="width:120px;height:120px;display:grid;grid-template-columns:1fr 1fr;gap:5px">
+                  <span style="background:#C62828;border-radius:120px 8px 8px 8px"></span>
+                  <span style="background:#F2A100;border-radius:8px 120px 8px 8px"></span>
+                  <span style="background:#2F6DB5;border-radius:8px 8px 8px 120px"></span>
+                  <span style="background:#2E8B57;border-radius:8px 8px 120px 8px"></span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                  <h2 style="margin:0;font:800 30px/1.15 var(--font-sans);letter-spacing:-0.02em;color:var(--white)">¡Listo, {{ name }}!</h2>
+                  <p style="margin:0;font:500 17px/1.5 var(--font-sans);color:var(--gray-300);text-wrap:pretty">Completaste tu lectura rápida en {{ durationText }}. Tu perfil de liderazgo está listo.</p>
+                </div>
+                <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Button" variant="primary" size="lg" on-click="{{ toProfile }}" dc-props="{{ fullBtn }}" hint-size="100%,56px">Ver mi perfil</x-import>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ paused }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;background:var(--rich-black);display:flex;align-items:center;justify-content:center;padding:24px;z-index:10">
+                <div style="width:100%;background:var(--raisin-black);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+                  <span style="font:800 24px var(--font-sans);letter-spacing:-0.02em">Lectura en pausa</span>
+                  <span style="font:500 15px/1.5 var(--font-sans);color:var(--gray-300)">Tus respuestas se guardaron. Continúa cuando estés listo.</span>
+                  <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Button" variant="primary" on-click="{{ togglePause }}" hint-size="140px,48px">Reanudar</x-import>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;padding:8px 32px 34px;opacity:{{ controlsOpacity }}">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+              <button onClick="{{ disagree }}" aria-label="En desacuerdo" style="width:68px;height:68px;border-radius:999px;border:2px solid #4a4a4a;background:var(--raisin-black);color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;transform:scale({{ disagreeScale }});transition:transform 150ms var(--ease),background 150ms var(--ease)" style-hover="background:#3a3a3a">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+              </button>
+              <span style="font:700 13px var(--font-sans);color:var(--gray-300)">En desacuerdo</span>
+            </div>
+            <span style="font:600 12px var(--font-sans);color:var(--gray-600);padding-bottom:30px">← →</span>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+              <button onClick="{{ agree }}" aria-label="De acuerdo" style="width:68px;height:68px;border-radius:999px;border:2px solid var(--orange);background:var(--orange);color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;transform:scale({{ agreeScale }});transition:transform 150ms var(--ease),background 150ms var(--ease)" style-hover="background:var(--orange-600)">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+              </button>
+              <span style="font:700 13px var(--font-sans);color:var(--gray-300)">De acuerdo</span>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isProfile }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1;min-height:0;overflow-y:auto;background:var(--white);display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 24px 16px;border-bottom:1px solid var(--gray-200)">
+            <span style="font:800 17px var(--font-sans);letter-spacing:-0.02em;color:var(--rich-black)">Mi perfil de liderazgo</span>
+            <x-import component-from-global-scope="AnHuacMayabEducarParaTransformar_44f5d9.Button" variant="outline" size="sm" on-click="{{ restart }}" hint-size="100px,40px">Repetir</x-import>
+          </div>
+          <div style="padding:24px 24px 8px;display:flex;flex-direction:column;gap:10px">
+            <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)">{{ name }} · Lectura rápida</span>
+            <h2 style="margin:0;font:800 28px/1.15 var(--font-sans);letter-spacing:-0.02em;color:var(--rich-black);text-wrap:pretty">Tu estilo predominante es <span style="color:{{ top.ink }}">{{ top.name }}</span></h2>
+            <p style="margin:0;font:500 15px/1.55 var(--font-sans);color:var(--text-muted);text-wrap:pretty">{{ top.tagline }} {{ secondLine }}</p>
+          </div>
+
+          <div style="position:relative;width:310px;height:310px;margin:12px auto 4px;flex:none">
+            <svg width="310" height="310" viewBox="0 0 300 300" style="display:block">
+              <circle cx="150" cy="150" r="128" fill="none" stroke="#E6E6E6" stroke-width="1"></circle>
+              <circle cx="150" cy="150" r="88" fill="none" stroke="#E6E6E6" stroke-width="1"></circle>
+              <circle cx="150" cy="150" r="48" fill="none" stroke="#E6E6E6" stroke-width="1"></circle>
+              <line x1="150" y1="14" x2="150" y2="286" stroke="#E6E6E6" stroke-width="1"></line>
+              <line x1="14" y1="150" x2="286" y2="150" stroke="#E6E6E6" stroke-width="1"></line>
+              <g style="transform:scale({{ chartScale }});transform-origin:150px 150px;transition:transform 900ms cubic-bezier(.2,.7,.2,1)">
+                <sc-for list="{{ wedges }}" as="w" hint-placeholder-count="4">
+                  <path d="{{ w.d }}" fill="{{ w.color }}" onClick="{{ w.open }}" style="cursor:pointer;opacity:{{ w.op }};transition:opacity 150ms" style-hover="opacity:.85"></path>
+                </sc-for>
+              </g>
+              <circle cx="150" cy="150" r="5" fill="#FFFFFF"></circle>
+            </svg>
+            <sc-for list="{{ corners }}" as="c" hint-placeholder-count="4">
+              <button onClick="{{ c.open }}" style="position:absolute;top:{{ c.top }};left:{{ c.left }};right:{{ c.right }};bottom:{{ c.bottom }};border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:{{ c.align }};gap:0;cursor:pointer;font-family:var(--font-sans)">
+                <span style="font:800 18px/1 var(--font-sans);color:{{ c.ink }}">{{ c.pct }}%</span>
+                <span style="font:700 10px var(--font-sans);letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">{{ c.short }}</span>
+              </button>
+            </sc-for>
+          </div>
+          <p style="margin:0 0 8px;text-align:center;font:600 13px var(--font-sans);color:var(--spanish-gray)">Toca un estilo para explorarlo</p>
+
+          <div style="padding:8px 24px 32px;display:flex;flex-direction:column">
+            <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
+              <button onClick="{{ r.open }}" style="display:grid;grid-template-columns:14px minmax(0,1fr) 44px 16px;align-items:center;gap:12px;padding:16px 0;border:0;border-bottom:1px solid var(--gray-200);background:transparent;cursor:pointer;text-align:left;font-family:var(--font-sans)" style-hover="background:var(--orange-50)">
+                <span style="width:14px;height:14px;border-radius:999px;background:{{ r.color }}"></span>
+                <span style="display:flex;flex-direction:column;gap:8px;min-width:0">
+                  <span style="font:700 15px var(--font-sans);color:var(--rich-black)">{{ r.name }}</span>
+                  <span style="height:6px;border-radius:999px;background:var(--gray-100);overflow:hidden;display:block"><span style="display:block;height:100%;width:{{ r.bar }}%;background:{{ r.color }};border-radius:999px;transition:width 900ms cubic-bezier(.2,.7,.2,1)"></span></span>
+                </span>
+                <span style="font:800 16px var(--font-sans);color:var(--rich-black);text-align:right;font-variant-numeric:tabular-nums">{{ r.pct }}%</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9C9C9C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1;min-height:0;overflow-y:auto;background:{{ d.color }};color:{{ d.fg }};display:flex;flex-direction:column;transition:background 250ms var(--ease)">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 20px 8px">
+            <button onClick="{{ toProfile }}" aria-label="Volver" style="width:44px;height:44px;border-radius:999px;border:0;background:{{ d.chip }};color:{{ d.fg }};display:flex;align-items:center;justify-content:center;cursor:pointer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>
+            </button>
+            <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase">Estilo {{ d.num }} de 4</span>
+            <div style="display:flex;gap:8px">
+              <button onClick="{{ prevStyle }}" aria-label="Anterior" style="width:44px;height:44px;border-radius:999px;border:0;background:{{ d.chip }};color:{{ d.fg }};display:flex;align-items:center;justify-content:center;cursor:pointer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>
+              </button>
+              <button onClick="{{ nextStyle }}" aria-label="Siguiente" style="width:44px;height:44px;border-radius:999px;border:0;background:{{ d.chip }};color:{{ d.fg }};display:flex;align-items:center;justify-content:center;cursor:pointer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div style="padding:20px 24px 28px;display:flex;flex-direction:column;gap:12px">
+            <span style="font:800 72px/1 var(--font-sans);letter-spacing:-0.04em">{{ d.pct }}%</span>
+            <h2 style="margin:0;font:800 32px/1.1 var(--font-sans);letter-spacing:-0.02em;color:inherit">{{ d.name }}</h2>
+            <p style="margin:0;font:600 17px/1.5 var(--font-sans);text-wrap:pretty">{{ d.summary }}</p>
+          </div>
+          <div style="flex:1;background:var(--white);color:var(--text-body);border-radius:28px 28px 0 0;padding:28px 24px 32px;display:flex;flex-direction:column;gap:24px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)">Fortalezas</span>
+              <sc-for list="{{ d.strengths }}" as="it" hint-placeholder-count="3">
+                <div style="display:flex;gap:12px;align-items:flex-start;font:600 15px/1.45 var(--font-sans);color:var(--rich-black)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5900" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+                  <span>{{ it.t }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="height:1px;background:var(--gray-200)"></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)">Puntos ciegos</span>
+              <sc-for list="{{ d.blind }}" as="it" hint-placeholder-count="2">
+                <div style="display:flex;gap:12px;align-items:flex-start;font:500 15px/1.45 var(--font-sans);color:var(--text-body)">
+                  <span style="width:8px;height:8px;border-radius:999px;border:2px solid var(--spanish-gray);flex:none;margin:6px 5px 0"></span>
+                  <span>{{ it.t }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="background:var(--orange-50);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px">
+              <span style="font:700 11px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-700)">Consejo de tu coach</span>
+              <p style="margin:0;font:600 16px/1.5 var(--font-sans);color:var(--rich-black);text-wrap:pretty">{{ d.tip }}</p>
+            </div>
+            <div style="display:flex;justify-content:center;gap:8px">
+              <sc-for list="{{ detailDots }}" as="dd" hint-placeholder-count="4">
+                <button onClick="{{ dd.open }}" aria-label="{{ dd.name }}" style="width:{{ dd.w }}px;height:10px;border-radius:999px;border:0;padding:0;background:{{ dd.color }};opacity:{{ dd.op }};cursor:pointer;transition:all 250ms var(--ease)"></button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startScreen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;welcome&quot;,&quot;quiz&quot;,&quot;profile&quot;],&quot;default&quot;:&quot;welcome&quot;,&quot;tsType&quot;:&quot;'welcome'|'quiz'|'profile'&quot;,&quot;section&quot;:&quot;Prototipo&quot;},&quot;colorCards&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cuestionario&quot;},&quot;showTimer&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cuestionario&quot;}}">
+const STYLES = [
+  { key: 'rojo', name: 'Rojo Directivo', short: 'Directivo', color: '#C62828', ink: '#C62828', fg: '#FFFFFF', chip: 'rgba(0,0,0,.18)',
+    tagline: 'Marcas el rumbo y movilizas al equipo hacia resultados.',
+    summary: n => `${n} asume la conducción con naturalidad: define metas claras, decide con rapidez y sostiene el ritmo cuando un proyecto académico se complica.`,
+    strengths: ['Claridad en metas y prioridades', 'Decisión ante la incertidumbre', 'Capacidad para destrabar proyectos'],
+    blind: ['Puede avanzar sin escuchar a todos los involucrados', 'La urgencia puede percibirse como presión'],
+    tip: 'Antes de tu próxima decisión importante, pide su punto de vista a dos docentes y explica al equipo el porqué, no solo el qué.' },
+  { key: 'amarillo', name: 'Amarillo Innovador', short: 'Innovador', color: '#F2A100', ink: '#B87A00', fg: '#040404', chip: 'rgba(0,0,0,.10)',
+    tagline: 'Imaginas nuevas posibilidades y contagias entusiasmo.',
+    summary: n => `${n} piensa en el futuro del programa, propone formas distintas de enseñar y reúne al equipo alrededor de ideas nuevas.`,
+    strengths: ['Visión de largo plazo', 'Creatividad para resolver problemas', 'Energía que motiva al equipo'],
+    blind: ['Puede iniciar más proyectos de los que concluye', 'Los detalles operativos quedan en segundo plano'],
+    tip: 'Elige una sola iniciativa para este semestre y asígnale un responsable y una fecha de cierre.' },
+  { key: 'verde', name: 'Verde Empoderador', short: 'Empoderador', color: '#2E8B57', ink: '#2E8B57', fg: '#FFFFFF', chip: 'rgba(0,0,0,.18)',
+    tagline: 'Desarrollas a las personas y construyes acuerdos.',
+    summary: n => `${n} escucha antes de opinar, delega con confianza y se ocupa de que docentes y estudiantes crezcan. Su liderazgo se mide en el desarrollo de otros.`,
+    strengths: ['Escucha activa y empatía', 'Delegación que forma nuevos líderes', 'Clima de confianza en el equipo'],
+    blind: ['Puede evitar conversaciones difíciles', 'Buscar consenso puede alargar las decisiones'],
+    tip: 'Agenda esta semana una conversación de retroalimentación pendiente: sé claro con la expectativa y generoso con el apoyo.' },
+  { key: 'azul', name: 'Azul Analítico', short: 'Analítico', color: '#2F6DB5', ink: '#2F6DB5', fg: '#FFFFFF', chip: 'rgba(0,0,0,.18)',
+    tagline: 'Decides con evidencia y construyes procesos sólidos.',
+    summary: n => `${n} se apoya en datos, indicadores y procedimientos. Cuida la calidad académica y anticipa riesgos antes de que se conviertan en problemas.`,
+    strengths: ['Rigor en el análisis y la planeación', 'Procesos claros y documentados', 'Atención al detalle y a la calidad'],
+    blind: ['Puede retrasar decisiones esperando más información', 'Los cambios rápidos le generan resistencia'],
+    tip: 'Define de antemano qué información es suficiente; cuando la tengas, decide y ajusta sobre la marcha.' }
+];
+// [code, enunciado, aspecto, isNegative, cardColor] — isNegative: "En desacuerdo" suma +1
+const BANK = {
+  rojo: [
+    ['R1', 'Soy naturalmente muy competitivo con los demás y me impulsa ganar.', 'Enfocado en resultados', false, '#882329'],
+    ['R2', 'A veces soy tan directo e impaciente que termino hiriendo o molestando a la gente.', 'Enfocado en resultados', true, '#C9381E'],
+    ['R3', 'Me siento muy cómodo asumiendo el control y dirigiendo en situaciones de grupo.', 'Extrovertido', false, '#C9381E'],
+    ['R4', 'Me obsesiona tanto ganar que llego a pasar por alto las necesidades de los demás.', 'Enfocado en resultados', true, '#882329'],
+    ['R5', 'Disfruto siendo el centro de atención y expresando mi energía abiertamente.', 'Extrovertido', false, '#C9381E'],
+    ['R6', 'Mi necesidad de tener el mando resulta a menudo dominante y agobiante para mi entorno.', 'Extrovertido', true, '#C9381E'],
+    ['R7', 'Me conocen como alguien tenaz que no desiste hasta ver la meta cumplida.', 'Enfocado en resultados', false, '#882329'],
+    ['R8', 'Al debatir un punto, los demás a veces me perciben agresivo o inflexible.', 'Enfocado en resultados', true, '#882329'],
+    ['R9', 'Disfruto evaluando críticamente las ideas y sosteniendo debates exigentes.', 'Enfocado en resultados', false, '#D66B24'],
+    ['R10', 'A veces presiono mis opiniones de forma tan vehemente que anulo las posturas ajenas.', 'Extrovertido', true, '#C9381E'],
+    ['R11', 'Me esfuerzo constantemente por superar el rendimiento de mis colegas.', 'Enfocado en resultados', false, '#882329'],
+    ['R12', 'Mi nivel de entusiasmo y volumen de energía llega a abrumar o agotar a quienes me rodean.', 'Extrovertido', true, '#C9381E'],
+    ['R13', 'Soy un negociador duro que prioriza alcanzar el objetivo planteado.', 'Enfocado en resultados', false, '#882329']
+  ],
+  azul: [
+    ['A1', 'Cuando trabajo en una tarea soy sumamente estructurado y metódico.', 'Disciplinado', false, '#7B3060'],
+    ['A2', 'Pierdo tanto tiempo organizando y detallando que me cuesta pasar a la acción.', 'Disciplinado', true, '#7B3060'],
+    ['A3', 'Es fundamental para mí verificar y contrastar todos los hechos antes de decidir.', 'Aterrizado', false, '#2F4A96'],
+    ['A4', 'Mi necesidad de ser objetivo me hace parecer una persona fría o distante ante los demás.', 'Aterrizado', true, '#1B3B87'],
+    ['A5', 'Creo firmemente en cumplir siempre mis compromisos y plazos establecidos.', 'Disciplinado', false, '#7B3060'],
+    ['A6', 'Me vuelvo tan rígido con los métodos tradicionales que me resisto a cualquier cambio necesario.', 'Aterrizado', true, '#215CAE'],
+    ['A7', 'La atención minuciosa al detalle y la precisión es una de mis fortalezas clave.', 'Disciplinado', false, '#7B3060'],
+    ['A8', 'A veces me pierdo en los detalles minuciosos y pierdo la visión del panorama general.', 'Disciplinado', true, '#7B3060'],
+    ['A9', 'Evito teorizar y me enfoco en lo concreto, práctico y verificable.', 'Aterrizado', false, '#1B3B87'],
+    ['A10', 'Mi afán por la exactitud y la precisión puede volverse excesivo y retrasar las entregas.', 'Disciplinado', true, '#7B3060'],
+    ['A11', 'Analizo las situaciones de manera lógica y racional sin involucrar emociones.', 'Aterrizado', false, '#2F4A96'],
+    ['A12', 'Soy tan realista y estricto con los datos que cierro el paso a explorar hipótesis creativas.', 'Aterrizado', true, '#1B3B87'],
+    ['A13', 'Manejo bien y con paciencia las tareas repetitivas que demandan gran rigor técnico.', 'Disciplinado', false, '#7B3060']
+  ],
+  amarillo: [
+    ['Y1', 'Soy naturalmente inclinado a pensar en el panorama global e identificar patrones.', 'Pensador de panorama global', false, '#D66B24'],
+    ['Y2', 'Me pierdo tanto en la imaginación y las teorías que descuido la viabilidad real.', 'Pensador de panorama global', true, '#D66B24'],
+    ['Y3', 'Tiendo a mantener mis planes informales para tener abiertas todas mis opciones.', 'Inspirado', false, '#B6BE34'],
+    ['Y4', 'Mi falta de planeación y orden me causa retrasos o incumplimiento de fechas límite.', 'Inspirado', true, '#B6BE34'],
+    ['Y5', 'Disfruto profundamente siendo una fuente constante de ideas disruptivas.', 'Pensador de panorama global', false, '#D66B24'],
+    ['Y6', 'A menudo propongo o inicio cambios solo por aburrimiento, sin que exista una necesidad real.', 'Pensador de panorama global', true, '#D66B24'],
+    ['Y7', 'No creo que la tradición o la costumbre deba interponerse ante un cambio conveniente.', 'Pensador de panorama global', false, '#D66B24'],
+    ['Y8', 'Puedo ser tan adaptable y cambiar de rumbo con tanta facilidad que pierdo el foco original.', 'Inspirado', true, '#B6BE34'],
+    ['Y9', 'Disfruto trabajar en entornos flexibles donde las ideas fluyan sin objetivos rígidos.', 'Inspirado', false, '#B6BE34'],
+    ['Y10', 'A veces complico innecesariamente problemas que admitían una solución directa y sencilla.', 'Pensador de panorama global', true, '#D66B24'],
+    ['Y11', 'Me entusiasma improvisar soluciones espontáneas cuando el contexto cambia repentinamente.', 'Inspirado', false, '#B6BE34'],
+    ['Y12', 'Ha habido ocasiones en que he actuado por mero impulso y después he lamentado no reflexionar.', 'Inspirado', true, '#B6BE34']
+  ],
+  verde: [
+    ['G1', 'Soy naturalmente muy empático y comprendo el punto de vista ajeno.', 'Enfocado en las personas', false, '#4B7C37'],
+    ['G2', "Por complacer a los demás y evitar roces, me cuesta muchísimo decir 'no' o poner límites.", 'Enfocado en las personas', true, '#4B7C37'],
+    ['G3', 'Me gusta escuchar con atención a los demás antes de compartir mi postura.', 'Introvertido', false, '#1E5AA8'],
+    ['G4', 'Invierto tanto tiempo cuidando a los demás que descuido mis propios objetivos prioritarios.', 'Enfocado en las personas', true, '#4B7C37'],
+    ['G5', 'Le doy prioridad a la armonía grupal y a encontrar puntos en común donde todos ganen.', 'Enfocado en las personas', false, '#4B7C37'],
+    ['G6', 'Puedo ser tan diplomático y reacio a la discusión que evito tomar una postura clara y firme.', 'Enfocado en las personas', true, '#4B7C37'],
+    ['G7', 'Disfruto profundamente colaborar en equipo en lugar de competir individualmente.', 'Enfocado en las personas', false, '#4B7C37'],
+    ['G8', 'A veces cedo en mi posición durante un debate solo para que la otra persona no se sienta mal.', 'Enfocado en las personas', true, '#4B7C37'],
+    ['G9', 'Siempre me aseguro de reconocer y validar públicamente las contribuciones de los demás.', 'Enfocado en las personas', false, '#4B7C37'],
+    ['G10', 'Me resulta sumamente difícil expresar mis opiniones cuando percibo tensión en una reunión.', 'Introvertido', true, '#1E5AA8'],
+    ['G11', 'Tiendo a confiar espontáneamente en la buena fe y las intenciones de las personas.', 'Enfocado en las personas', false, '#4B7C37'],
+    ['G12', 'Llego a involucrarme de forma tan compasiva en los problemas ajenos que pierdo la objetividad.', 'Enfocado en las personas', true, '#4B7C37']
+  ]
+};
+// Orden intercalado R1, A1, Y1, G1, R2… para no agrupar cuadrantes
+const QUESTIONS = (() => {
+  const keys = ['rojo', 'azul', 'amarillo', 'verde'], out = [];
+  for (let i = 0; i < 13; i++) keys.forEach(k => {
+    const q = BANK[k][i];
+    if (q) out.push({ id: out.length + 1, style: k, code: q[0], text: q[1], aspect: q[2], negative: q[3], color: q[4], fg: q[4] === '#B6BE34' ? '#040404' : '#FFFFFF' });
+  });
+  return out;
+})();
+const SAMPLE = { rojo: 40, amarillo: 60, verde: 80, azul: 60 };
+const INTRO = [
+  'Este cuestionario te ayuda a identificar tu estilo de liderazgo académico.',
+  'Desliza la tarjeta a la derecha si estás de acuerdo y a la izquierda si no. También puedes usar los botones.',
+  'No hay respuestas correctas. Responde pensando en cómo actúas hoy, no en cómo te gustaría actuar.'
+];
+const pad = n => String(n).padStart(2, '0');
+
+class Component extends DCLogic {
+  state = { screen: this.props.startScreen ?? 'welcome', name: 'Alex', nameError: '', introStep: 0, count: 3, idx: 0, answers: [], dx: 0, dy: 0, dragging: false, exiting: 0, secs: 0, timerOn: false, paused: false, detail: 0, revealed: (this.props.startScreen ?? 'welcome') === 'profile' };
+
+  componentDidMount() {
+    this.iv = setInterval(() => { if (this.state.timerOn && !this.state.paused) this.setState(s => ({ secs: s.secs + 1 })); }, 1000);
+    this.onKey = e => {
+      if (this.state.screen !== 'quiz' || this.state.paused) return;
+      if (e.key === 'ArrowRight') this.answer(true);
+      if (e.key === 'ArrowLeft') this.answer(false);
+    };
+    window.addEventListener('keydown', this.onKey);
+    if (this.state.screen === 'quiz') this.setState({ timerOn: true });
+  }
+  componentDidUpdate(prev) {
+    if (prev.startScreen !== this.props.startScreen && this.props.startScreen) this.go(this.props.startScreen);
+  }
+  componentWillUnmount() { clearInterval(this.iv); clearTimeout(this.t); window.removeEventListener('keydown', this.onKey); }
+
+  go(screen) {
+    clearTimeout(this.t);
+    const patch = { screen, paused: false };
+    if (screen === 'welcome') Object.assign(patch, { idx: 0, answers: [], secs: 0, timerOn: false, introStep: 0, dx: 0, dy: 0, exiting: 0 });
+    if (screen === 'quiz') Object.assign(patch, { timerOn: true });
+    if (screen === 'profile') patch.revealed = false;
+    this.setState(patch);
+    if (screen === 'countdown') this.tick(3);
+    if (screen === 'profile') this.t = setTimeout(() => this.setState({ revealed: true }), 80);
+  }
+  tick(n) {
+    this.setState({ count: n });
+    this.t = setTimeout(() => (n > 0 ? this.tick(n - 1) : this.go('quiz')), n > 0 ? 800 : 650);
+  }
+  answer(agree) {
+    const { idx, exiting, screen } = this.state;
+    if (exiting || screen !== 'quiz') return;
+    this.setState({ exiting: agree ? 1 : -1, dragging: false });
+    this.t = setTimeout(() => {
+      const cq = QUESTIONS[idx];
+      const answers = [...this.state.answers, { style: cq.style, code: cq.code, agree, point: cq.negative ? !agree : agree }];
+      const done = idx + 1 >= QUESTIONS.length;
+      this.setState({ answers, idx: done ? idx : idx + 1, dx: 0, dy: 0, exiting: 0, timerOn: !done, screen: done ? 'reveal' : 'quiz' });
+    }, 280);
+  }
+  scores() {
+    if (!this.state.answers.length) return SAMPLE;
+    const out = {};
+    STYLES.forEach(s => {
+      const a = this.state.answers.filter(x => x.style === s.key);
+      out[s.key] = a.length ? Math.round(100 * a.filter(x => x.point).length / a.length) : 0;
+    });
+    return out;
+  }
+
+  renderVals() {
+    const st = this.state;
+    const colorCards = this.props.colorCards ?? false;
+    const showTimer = this.props.showTimer ?? true;
+    const sc = this.scores();
+    const ranked = STYLES.map((s, i) => ({ ...s, i, pct: sc[s.key] })).sort((a, b) => b.pct - a.pct || a.i - b.i);
+    const top = ranked[0], second = ranked[1];
+    const open = i => () => { this.setState({ detail: i, screen: 'detail' }); };
+    const dark = ['intro', 'countdown', 'quiz', 'reveal'].includes(st.screen);
+    const q = QUESTIONS[st.idx], nq = QUESTIONS[st.idx + 1];
+    const qs = STYLES.find(s => s.key === q.style), nqs = nq && STYLES.find(s => s.key === nq.style);
+    const thr = 100, clamp = v => Math.max(0, Math.min(1, v));
+    const live = st.exiting ? st.exiting : st.dx / thr;
+    const tm = `${pad(Math.floor(st.secs / 3600))}:${pad(Math.floor(st.secs / 60) % 60)}:${pad(st.secs % 60)}`;
+    const m = Math.floor(st.secs / 60), s = st.secs % 60;
+    const wedge = (a1, a2, r) => {
+      const rad = a => a * Math.PI / 180, p = a => `${(150 + r * Math.cos(rad(a))).toFixed(1)} ${(150 + r * Math.sin(rad(a))).toFixed(1)}`;
+      return `M150 150 L${p(a1)} A${r} ${r} 0 0 1 ${p(a2)} Z`;
+    };
+    const angles = [180, 270, 0, 90];
+    const pos = ['top:0;left:0', 'top:0;right:0', 'bottom:0;right:0', 'bottom:0;left:0'];
+    const d = STYLES[st.detail];
+    const detailBg = st.screen === 'detail' ? d.color : null;
+
+    return {
+      styles: STYLES, total: QUESTIONS.length, name: st.name, nameError: st.nameError,
+      statusBg: detailBg || (dark ? '#040404' : '#FFFFFF'),
+      statusFg: st.screen === 'detail' ? d.fg : (dark ? '#FFFFFF' : '#040404'),
+      isWelcome: st.screen === 'welcome', isDark: dark, isIntro: st.screen === 'intro', isCountdown: st.screen === 'countdown',
+      isQuiz: st.screen === 'quiz', isReveal: st.screen === 'reveal', isProfile: st.screen === 'profile', isDetail: st.screen === 'detail',
+      fullBtn: { style: { width: '100%' } }, ghostOrange: { style: { color: 'var(--orange)' } },
+      onName: e => this.setState({ name: e.target.value, nameError: '' }),
+      start: () => (st.name.trim() ? this.go('intro') : this.setState({ nameError: 'Escribe tu nombre para continuar' })),
+      exit: () => this.go('welcome'),
+      togglePause: () => st.screen === 'quiz' && this.setState(s2 => ({ paused: !s2.paused })),
+      paused: st.paused, notPaused: !st.paused, pauseOpacity: st.screen === 'quiz' ? 1 : .35,
+      headerText: (showTimer ? tm + ' · ' : '') + (st.name || 'Tú'),
+      progressPct: st.screen === 'quiz' ? (st.idx / QUESTIONS.length) * 100 : st.screen === 'reveal' ? 100 : 0,
+      introNum: st.introStep + 1, introText: INTRO[st.introStep], introCta: st.introStep === 2 ? '¡Vamos!' : 'Continuar',
+      introDots: INTRO.map((_, i) => ({ w: i === st.introStep ? 22 : 8, bg: i === st.introStep ? '#FF5900' : '#CFCFCF' })),
+      nextIntro: () => (st.introStep < 2 ? this.setState({ introStep: st.introStep + 1 }) : this.go('countdown')),
+      countLabel: st.count > 0 ? st.count : '¡Vamos!', countSize: st.count > 0 ? 88 : 36,
+      qNum: st.idx + 1, qText: q.text, hasNext: !!nq, nextText: nq ? nq.text : '',
+      cardBg: colorCards ? q.color : '#FFFFFF', cardFg: colorCards ? q.fg : '#040404',
+      cardEyebrow: colorCards ? (q.fg === '#FFFFFF' ? 'rgba(255,255,255,.8)' : 'rgba(4,4,4,.65)') : '#9C9C9C',
+      nextBg: colorCards && nq ? nq.color : '#FFFFFF', nextFg: colorCards && nq ? nq.fg : '#040404',
+      cardTransform: st.exiting ? `translate(${st.exiting * 560}px, ${st.dy * .3}px) rotate(${st.exiting * 22}deg)` : `translate(${st.dx}px, ${st.dy * .3}px) rotate(${st.dx * .06}deg)`,
+      cardTransition: st.dragging ? 'none' : 'transform 280ms cubic-bezier(.2,.7,.2,1)',
+      agreeOp: clamp(live), disagreeOp: clamp(-live),
+      agreeScale: 1 + clamp(live) * .14, disagreeScale: 1 + clamp(-live) * .14,
+      controlsOpacity: st.screen === 'quiz' ? 1 : st.screen === 'reveal' ? 0 : .35,
+      onDown: e => { if (st.exiting) return; e.currentTarget.setPointerCapture(e.pointerId); this.start0 = { x: e.clientX, y: e.clientY }; this.setState({ dragging: true }); },
+      onMove: e => { if (!this.state.dragging) return; this.setState({ dx: e.clientX - this.start0.x, dy: e.clientY - this.start0.y }); },
+      onUp: () => { if (!this.state.dragging) return; const dx = this.state.dx; if (Math.abs(dx) > thr) this.answer(dx > 0); else this.setState({ dragging: false, dx: 0, dy: 0 }); },
+      agree: () => this.answer(true), disagree: () => this.answer(false),
+      durationText: m ? `${m} min ${s} s` : `${s} segundos`,
+      toProfile: () => this.go('profile'), restart: () => this.go('welcome'),
+      top, secondLine: second.pct > 0 ? `También muestras rasgos de ${second.name} (${second.pct}%).` : '',
+      chartScale: st.revealed ? 1 : 0.05,
+      wedges: STYLES.map((s, i) => ({ d: wedge(angles[i] + 1.5, angles[i] + 88.5, 22 + (sc[s.key] / 100) * 106), color: s.color, op: 1, open: open(i) })),
+      corners: STYLES.map((s, i) => ({ top: i < 2 ? '0' : 'auto', bottom: i < 2 ? 'auto' : '0', left: i === 0 || i === 3 ? '0' : 'auto', right: i === 1 || i === 2 ? '0' : 'auto', align: i === 0 || i === 3 ? 'flex-start' : 'flex-end', pct: sc[s.key], short: s.short, ink: s.ink, open: open(i) })),
+      rows: ranked.map(r => ({ name: r.name, color: r.color, pct: r.pct, bar: st.revealed ? r.pct : 0, open: open(r.i) })),
+      d: { ...d, num: st.detail + 1, pct: sc[d.key], summary: d.summary(st.name || 'Tú'), strengths: d.strengths.map(t => ({ t })), blind: d.blind.map(t => ({ t })) },
+      prevStyle: () => this.setState({ detail: (st.detail + 3) % 4 }), nextStyle: () => this.setState({ detail: (st.detail + 1) % 4 }),
+      detailDots: STYLES.map((s, i) => ({ name: s.name, color: s.color, w: i === st.detail ? 28 : 10, op: i === st.detail ? 1 : .35, open: open(i) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
